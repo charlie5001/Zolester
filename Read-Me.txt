@@ -1,0 +1,5 @@
+Do not change the name of these files:
+insert.txt
+setup3.py
+ZolesterAuthorEdition.py
+Thank You for using Charlie Chen's Zolester

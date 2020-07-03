@@ -1,0 +1,18 @@
+LOGO = Figlet(font='slant')
+filetoread = open("/.zotero-ft-info")
+line = filetoread.readline()
+while True:
+    line = filetoread.readline()
+    if "Author:" in line:
+        break
+line = line.replace("Author:", "")
+line = line.replace("\n", "")
+line = line.replace("         ", "")
+newfolder = path + "/" + line
+source_path = os.path.dirname(os.path.realpath(__file__))        
+os.chdir(source_path)
+shutil.copytree(source_path, newfolder)
+
+print("if any thing went wrong contact your brother or read the README")  
+input("Press enter to get out of here!")
+os.remove(newfolder+"/ZolesterBeta.py")
